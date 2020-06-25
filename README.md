@@ -13,12 +13,12 @@ Carpe Diem is a **productivity journal app** for the day. It aims to keep the us
 
 Carpe Diem allows the user to **create a to-do list** for the day. Anything that has not been completed for the current day will be carried over the next day, though the user has the option to either keep past objectives or delete them.
 
-Carpe Diem has a **journaling feature** that allows the user to add descriptions to items in the to-do list.
-
-Inspired by the Pomodoro Technique, Carpe Diem has **two built-in timers** that allows the user to set aside a certain amount of time for working and taking a break. For instance, one timer can be set to 25 minutes of working and the other timer can be set to 5 minutes of taking a break. The timers will automatically run and repeat once the user activates them; once the work timer ends, it resets and the break timer starts.
+Carpe Diem also has a **journaling feature** that allows the user to add descriptions to items in the to-do list.
 
 ### Why is it important and interesting?
+This app keeps the user focused with what they need to do for the day. Instead of having a weekly planner or a monthly planner, the user is limited to a daily planner so that their focused on *one* thing, seizing the day. 
 
+This app aims to limit procrastination by not allowing the user to plan ahead, only allowing them to focus on what needs to be done that day.
 
 ### What language/tools/technology do we plan to use?
 Language:
@@ -28,3 +28,4 @@ Tools:
 - Dear ImGUI (https://github.com/ocornut/imgui)
 
 ### What will be the input/output of our project?
+The input will be the objectives the user needs to complete in their to-do list, along with descriptions if they choose to add them. The output will be a to-do list featuring those objectives and their descriptions if they have any.
