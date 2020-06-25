@@ -6,6 +6,7 @@
 | ------------------------ | ---------------- | 
 | Naomi Hossain            | nhoss005@ucr.edu |
 | Jamella Suzanne Pescasio | jpesc002@ucr.edu |
+| Matthew Huang            | mhuan060@ucr.edu |
 
 ### What is Carpe Diem?
 Carpe Diem is a **productivity journal app** for the day. It aims to keep the user focused on the present by limiting planning to one day.
