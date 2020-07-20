@@ -30,7 +30,7 @@ class Category : public Base {
          virtual void setString(std::string src) { this->str = src; }
          virtual std::string getString() { return str; }
          virtual void display() {
-             std::cout << str << ":" << std::endl;
+             std::cout << str << std::endl;
              int count = 1;
              std::list<Base*>::iterator it;
              for (it = children.begin(); it != children.end(); it++) {
