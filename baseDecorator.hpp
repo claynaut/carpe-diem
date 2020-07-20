@@ -7,7 +7,7 @@ class BaseDecorator : public Base {
     private:
         Base* x;
     public:
-        BaseDecorator(Base* src) { }
+        BaseDecorator(Base* src) { this->x = src; }
 
         virtual void display() = 0;
 };
