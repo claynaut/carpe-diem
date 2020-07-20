@@ -33,7 +33,10 @@
 *.app
 rshell
 test
+carpe_diem
 
 # CMake Temp Files
 CMakeCache.txt
-CMakeFiles
+CMakeFiles/
+cmake_install.cmake
+Makefile
