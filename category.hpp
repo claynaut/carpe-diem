@@ -16,10 +16,10 @@ class Category : public Base {
 
          void add(Base* src) { children.push_back(src); }
          void remove(int i) {
-             if (i <= 0 || i > children.size()) { return; }
+             if (i < 0 || i >= children.size()) { return; }
              std::list<Base*>::iterator it;
              for (it = children.begin(); it != children.end(); it++) {
-                 if (i == 1) {
+                 if (i == 0) {
                      it = children.erase(it);
                  }
                  i--;
@@ -37,6 +37,20 @@ class Category : public Base {
          }
          int getSize() { return children.size(); }
 
+         virtual bool is_complete() {
+             bool temp = true;
+             std::list<Base*>::iterator it;
+             for (it = children.begin(); it != children.end(); it++) {
+                 if (!(*it)->is_complete()) { temp = false; break; }
+             }
+             return temp;
+         }
+         virtual void toggleComplete() {
+             std::list<Base*>::iterator it;
+             for (it = children.begin(); it != children.end(); it++) {
+                (*it)->toggleComplete();
+             }
+         }
          virtual void setString(std::string src) { this->str = src; }
          virtual std::string getString() { return str; }
          virtual void display() {

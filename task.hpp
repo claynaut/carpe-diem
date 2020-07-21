@@ -10,8 +10,8 @@ class Task : public Base {
     public:
         Task(std::string src) : Base () { this->str = src; }
 
-        bool is_complete() { return complete; }
-        void toggleComplete() { 
+        virtual bool is_complete() { return complete; }
+        virtual void toggleComplete() { 
             if (complete) {
                 complete = false;
             }
