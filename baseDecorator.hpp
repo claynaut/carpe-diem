@@ -8,8 +8,11 @@ class BaseDecorator : public Base {
         Base* x;
     public:
         BaseDecorator(Base* src) { this->x = src; }
-
-        virtual void display() = 0;
+	
+        virtual void display() = 0; 
+	virtual void setString(std::string src) { return x->setString(src); }
+	virtual std::string getString() { return x->getString(); } 
+	virtual void save(std::ofstream& out, std::string filename) {x->save(out, filename); }
 };
 
 #endif //__BASEDECORATOR_HPP__
