@@ -120,6 +120,31 @@ TEST(CategoryTest, RemoveChildren_Invalid) {
     EXPECT_EQ(c1->getSize(), 4);
 }
 
+TEST(CategoryTest, At_NoChildren) {
+    Category* c1 = new Category("Category One");
+    
+    ASSERT_EQ(c1->at(0), nullptr);
+}
+
+TEST(CategoryTest, At_Children) {
+    Category* c1 = new Category("Category One");
+    Task* t1 = new Task("lorem");
+    Task* t2 = new Task("ipsum");
+    Task* t3 = new Task("hello");
+    Task* t4 = new Task("world");
+    c1->add(t1); c1->add(t2); c1->add(t3); c1->add(t4);
+
+    EXPECT_EQ(c1->getSize(), 4);
+    ASSERT_NE(c1->at(0), nullptr);
+    EXPECT_EQ(c1->at(0)->getString(), "lorem");
+    ASSERT_NE(c1->at(1), nullptr);
+    EXPECT_EQ(c1->at(1)->getString(), "ipsum");
+    ASSERT_NE(c1->at(2), nullptr);
+    EXPECT_EQ(c1->at(2)->getString(), "hello");
+    ASSERT_NE(c1->at(3), nullptr);
+    EXPECT_EQ(c1->at(3)->getString(), "world");
+}
+
 TEST(CategoryTest, SetGetString) {
     Category* c1 = new Category("Category One");
     
