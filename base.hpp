@@ -9,6 +9,8 @@ class Base {
     public:
         Base () { }
 
+        virtual bool is_complete() = 0;
+        virtual void toggleComplete() = 0;
         virtual void display() = 0;
         virtual void setString(std::string src) = 0;
         virtual std::string getString() = 0;
