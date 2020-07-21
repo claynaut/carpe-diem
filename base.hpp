@@ -9,6 +9,7 @@ class Base {
     public:
         Base () { }
 
+        virtual Base* at(int i) = 0;
         virtual bool is_complete() = 0;
         virtual void toggleComplete() = 0;
         virtual void display() = 0;

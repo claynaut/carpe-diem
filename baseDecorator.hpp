@@ -9,6 +9,7 @@ class BaseDecorator : public Base {
     public:
         BaseDecorator(Base* src) { this->x = src; }
 	
+        virtual Base* at(int i) { return x->at(i); }
         virtual bool is_complete() { return x->is_complete(); }
         virtual void toggleComplete() { x->toggleComplete(); }
         virtual void display() { x->display(); }

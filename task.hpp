@@ -10,6 +10,7 @@ class Task : public Base {
     public:
         Task(std::string src) : Base () { this->str = src; }
 
+        virtual Base* at(int i) { return nullptr; }
         virtual bool is_complete() { return complete; }
         virtual void toggleComplete() { 
             if (complete) {

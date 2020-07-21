@@ -25,7 +25,7 @@ class Category : public Base {
                  i--;
              }
          }
-         Base* at(int i) {
+         virtual Base* at(int i) {
              if (i < 0 || i >= children.size()) { return nullptr; }
              std::list<Base*>::iterator it;
              for (it = children.begin(); it != children.end(); it++) {
