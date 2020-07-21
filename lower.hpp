@@ -11,25 +11,20 @@ class Lower : public BaseDecorator {
     private:
         Base* x;
     public:
-        Lower(Base* x) : BaseDecorator(x) { }
+        Lower(Base* x) : BaseDecorator(x) { this->x = x;}
 
-        void display() { 
-		/*char* str[] = x->getString();
-		for (int i = 0; i < str.size(); i++) {
-                        //putchar(tolower(str[i]));
-			std::cout << std::putchar(tolower(x[i])) << std::endl; 
-                }*/
+        void display() {
 		int j = 0;
 		std::string str = x->getString();
-		//char* str = x->getString();
 		char ch = str[0];
 		while (str[j]) {
 			ch = str[j];
 			putchar(tolower(ch));
 			j++;
 		}
+		std::cout << std::endl;
 	}
+	
 };
 
 #endif //__LOWER_HPP__
-
