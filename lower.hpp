@@ -11,9 +11,9 @@ class Lower : public BaseDecorator {
     private:
         Base* x;
     public:
-        Lower() : BaseDecorator(x) { }
+        Lower(Base* x) : BaseDecorator(x) { }
 
-        virtual void display() { 
+        void display() { 
 		/*char* str[] = x->getString();
 		for (int i = 0; i < str.size(); i++) {
                         //putchar(tolower(str[i]));
