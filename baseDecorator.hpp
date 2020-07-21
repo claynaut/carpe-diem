@@ -1,7 +1,7 @@
-fndef __BASEDECORATOR_HPP__
+#ifndef __BASEDECORATOR_HPP__
 #define __BASEDECORATOR_HPP__
 
-#include “base.hpp”
+#include "base.hpp"
 
 class BaseDecorator : public Base {
     private:
