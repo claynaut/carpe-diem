@@ -9,7 +9,7 @@ class BaseDecorator : public Base {
     public:
         BaseDecorator(Base* src) { this->x = src; }
 	
-        virtual void display() = 0; 
+        virtual void display() {return x->display(); }; 
 	virtual void setString(std::string src) { return x->setString(src); }
 	virtual std::string getString() { return x->getString(); } 
 	virtual void save(std::ofstream& out, std::string filename) {x->save(out, filename); }
