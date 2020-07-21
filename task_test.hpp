@@ -5,6 +5,14 @@
 
 #include "task.hpp"
 
+TEST(TaskTest, At_Nullptr) {
+    Task* test = new Task("lorem ipsum");
+
+    ASSERT_EQ(test->at(0), nullptr);
+    ASSERT_EQ(test->at(20), nullptr);
+    ASSERT_EQ(test->at(-1), nullptr);
+}
+
 TEST(TaskTest, ToggleComplete) {
     Task* test = new Task("lorem ipsum");
     
