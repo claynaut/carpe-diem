@@ -2,6 +2,7 @@
 
 #include "task_test.hpp"
 #include "category_test.hpp"
+#include "lower_test.hpp"
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
