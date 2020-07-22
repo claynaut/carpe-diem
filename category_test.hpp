@@ -268,8 +268,8 @@ TEST(CategoryTest, Save) {
     out.open(filename); out.close(); // clear file to write to
     
     out.open(filename, std::ios::app);
-    c1->save(out, filename);
-    c2->save(out, filename);
+    c1->save(out);
+    c2->save(out);
 }
 
 #endif //__CATEGORY_TEST_HPP__

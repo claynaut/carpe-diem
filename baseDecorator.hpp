@@ -15,7 +15,7 @@ class BaseDecorator : public Base {
         virtual void display() { x->display(); }
 	virtual void setString(std::string src) { x->setString(src); }
 	virtual std::string getString() { return x->getString(); } 
-	virtual void save(std::ofstream& out, std::string filename) { x->save(out, filename); }
+	virtual void save(std::ofstream& out) { x->save(out); }
 };
 
 #endif //__BASEDECORATOR_HPP__

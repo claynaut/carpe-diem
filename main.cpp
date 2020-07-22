@@ -19,8 +19,8 @@ void toggleTaskCompletion(std::vector<Category*>&);
 void clearCompleteTasks(std::vector<Category*>&);
 void editSettings(int&);
 std::string getTimeStamp();
-void saveToFile(std::ofstream&, std::string, const int&, const std::vector<Category*>&);
-void parseSaveFile(std::ifstream&, std::string, std::string&, int&, std::vector<Category*>&);
+void saveToFile(std::ofstream&, const int&, const std::vector<Category*>&);
+void parseSaveFile(std::ifstream&, std::string&, int&, std::vector<Category*>&);
 
 int main() {
     std::string filename = "carpediem_savefile.txt";
@@ -42,7 +42,7 @@ int main() {
     std::ifstream in(filename);
     if (in.is_open()) { 
 	std::cout << "Save file found..." << std::endl;
-	parseSaveFile(in, filename, time, setting, savedSet); 
+	parseSaveFile(in, time, setting, savedSet); 
         categories = savedSet;
         std::cout << "Save file loaded..." << std::endl << std::endl;
     }
@@ -150,7 +150,7 @@ int main() {
     }
 
     std::ofstream out(filename);
-    saveToFile(out, filename, setting, categories);
+    saveToFile(out, setting, categories);
     out.close();
 
     std::cout << "Changes saved." << std::endl;
@@ -357,18 +357,18 @@ std::string getTimeStamp() {
     return time;
 }
 
-void saveToFile(std::ofstream& out, std::string filename, const int& setting, const std::vector<Category*>& c) {
+void saveToFile(std::ofstream& out, const int& setting, const std::vector<Category*>& c) {
     std::string time = getTimeStamp();
     out << ":time: " << time << std::endl;
 
     out << ":display: " << setting << std::endl;
 
     for (int i = 0; i < c.size(); i++) {
-        c.at(i)->save(out, filename);
+        c.at(i)->save(out);
     } 
 }
 
-void parseSaveFile(std::ifstream& in, std::string filename, std::string& time, int& setting, std::vector<Category*>& c) {
+void parseSaveFile(std::ifstream& in, std::string& time, int& setting, std::vector<Category*>& c) {
     if (!in.is_open()) { return; }
     std::string tag = "";
     Category* curr = nullptr;

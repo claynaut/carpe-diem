@@ -17,7 +17,7 @@ class Base {
         virtual void display() = 0;
         virtual void setString(std::string src) = 0;
         virtual std::string getString() = 0;
-        virtual void save(std::ofstream& out, std::string filename) = 0;
+        virtual void save(std::ofstream& out) = 0;
 	virtual void accept(Visitor*) = 0;
 };
 

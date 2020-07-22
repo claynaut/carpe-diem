@@ -58,8 +58,8 @@ TEST(TaskTest, Save) {
     out.open(filename); out.close(); // clear file to write to
 
     out.open(filename, std::ios::app);
-    t1->save(out, filename);
-    t2->save(out, filename);
+    t1->save(out);
+    t2->save(out);
     out.close();
 }
 #endif //__TASK_TEST_HPP__

@@ -63,13 +63,13 @@ class Category : public Base {
                  std::cout << std::endl;
              }
          }
-         virtual void save(std::ofstream& out, std::string filename) {
+         virtual void save(std::ofstream& out) {
              out << ":category: " << str << std::endl;
              std::list<Base*>::iterator it;
              it = children.begin();
 
              for (it = children.begin(); it != children.end(); it++) {
-                 (*it)->save(out, filename);
+                 (*it)->save(out);
              }
          }
 	virtual void accept(Visitor* v)  {

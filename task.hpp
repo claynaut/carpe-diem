@@ -32,7 +32,7 @@ class Task : public Base {
         }
         virtual void setString(std::string src) { this->str = src; }
         virtual std::string getString() { return str; }
-        virtual void save(std::ofstream& out, std::string filename) {
+        virtual void save(std::ofstream& out) {
             out << ":task: ";
             if (complete) {
                 out << "+ ";
