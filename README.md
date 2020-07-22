@@ -83,6 +83,9 @@ We then developed the classes `Task` and `Category` which we needed to implement
 ---
 
 ### Decorator Pattern
+**Problem:** We wanted the user to be able to change the text to either be all in lowercase or all in uppercase depending on their preference at any given time. However, we needed it to be able to change `Categories` and `Task` objects without affecting their behavior at run-time. 
+
+**Solution:** We decided to extend the interface, implementing a `Lower` and `Upper` class dynamically in order for the user to be able to decide whether they want to change the text to all lowercase or all uppercase.
 
 ---
 
