@@ -95,6 +95,7 @@ We then developed the classes `Task` and `Category` which we needed to implement
 ---
 
 ### Decorator Pattern
+![alt text](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/Decorator-Pattern-Diagram.png)
 
 ---
 
