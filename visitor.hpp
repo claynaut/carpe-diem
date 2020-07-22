@@ -9,6 +9,8 @@ class Visitor {
         int completeTask = 0;
         int incompleteTask = 0;
         int category = 0;
+   	int lower = 0;
+	int upper = 0;
 
     public:
        
@@ -23,6 +25,11 @@ class Visitor {
 
         void visitCategory() {category++; }
         int category_count() { return category; }
+
+	void visitLower() { lower++; }
+ 	int lower_count() { return lower;}
+	void visitUpper() { upper++; }
+	int upper_count() { return upper; }
 };
 
 #endif //__VISITOR_HPP__

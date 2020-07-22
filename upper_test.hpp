@@ -40,13 +40,5 @@ TEST(UpperTest, Test3) {
         Base* upper_c1 = new Upper(c1);
         upper_c1->display();
 
-        Base* upper_t1 = new Upper(t1);
-        upper_t1->display();
-
-        Base* upper_t2 = new Upper(t2);
-        upper_t2->display();
-
-        Base* upper_t3 = new Upper(t3);
-        upper_t3->display();
 }
 #endif

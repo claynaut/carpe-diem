@@ -22,9 +22,31 @@ class Lower : public BaseDecorator {
 			putchar(tolower(ch));
 			j++;
 		}
-		std::cout << std::endl;
-	}
+	        std::cout << std::endl;
 	
+                int i = 0;
+                while (x->at(i)) {
+			std::cout << i + 1 << ". ";
+			if (x->at(i)->is_complete()) {
+				std::cout << "[x] ";
+			}
+			else {
+				std::cout << "[ ] ";
+			}
+			j = 0;
+                	str = x->at(i)->getString();
+                	ch = str[0];
+                	while (str[j]) {
+                        	ch = str[j];
+                        	putchar(tolower(ch));
+                        	j++;
+                	}
+ 			i++;
+			std::cout << std::endl;
+        	}
+	}
+
+	void accept(Visitor* v) { x->accept(v); v->visitLower(); }
 };
 
 #endif //__LOWER_HPP__

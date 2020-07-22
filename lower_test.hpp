@@ -38,17 +38,7 @@ TEST(LowerTest, Test3) {
 	c1->display(); 
 	
 	Base* lower_c1 = new Lower(c1);
-	lower_c1->display();
-	
-	Base* lower_t1 = new Lower(t1);
-	lower_t1->display();		
-	
-	Base* lower_t2 = new Lower(t2);
-	lower_t2->display();
-
-	Base* lower_t3 = new Lower(t3);
-	lower_t3->display();
-		
+	lower_c1->display();		
 }
 
 #endif
