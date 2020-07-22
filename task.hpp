@@ -35,10 +35,10 @@ class Task : public Base {
         virtual void save(std::ofstream& out, std::string filename) {
             out << ":task: ";
             if (complete) {
-                out << "[x] ";
+                out << "+ ";
             }
             else {
-                out << "[ ] ";
+                out << "- ";
             }
             out << str << std::endl;
         }
