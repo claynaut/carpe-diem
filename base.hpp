@@ -5,6 +5,8 @@
 #include <string>
 #include <fstream>
 
+#include "visitor.hpp"
+
 class Base {
     public:
         Base () { }
@@ -16,7 +18,9 @@ class Base {
         virtual void setString(std::string src) = 0;
         virtual std::string getString() = 0;
         virtual void save(std::ofstream& out, std::string filename) = 0;
+	virtual void accept(Visitor*) = 0;
 };
+
 
 #endif //__BASE_HPP__
 
