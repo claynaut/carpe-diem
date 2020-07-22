@@ -70,7 +70,9 @@ We developed the pure virtual functions with the following objectives.
 We then developed the classes `Task` and `Category` which we needed to implement this design pattern.
 - Class `Task`: This class represents the tasks in a to-do list and is the leaf node in a composite pattern. It has two private variables, a string representing its name and a boolean value representing its status of completion.
 
-- Class `Category`: This class reprents the categories in a to-do list and is the composite/container in a composite pattern. It has two private variables, a string representing its name and a list of `Base*` objects representing its children, whether it's a `Task` object or another `Category` object. This class also contains three additional functions to aid in its functionality of adding, removing, and accessing its children.
+- Class `Category`: This class reprents the categories in a to-do list and is the composite/container in a composite pattern. It has two private variables, a string representing its name and a list of `Base*` objects representing its children, whether it's a `Task` object or another `Category` object. 
+
+   This class also contains three additional functions to aid in its functionality of adding, removing, and accessing its children.
 
     - `add(Base*)`: Adds a `Base*` object to the `Category` object's list of children.
     
