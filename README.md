@@ -87,6 +87,27 @@ We then developed the classes `Task` and `Category` which we needed to implement
 
 **Solution:** We decided to extend the interface, implementing a `Lower` and `Upper` class dynamically in order for the user to be able to decide whether they want to change the text to all lowercase or all uppercase.
 
+**Implementation:**
+
+We used the following abstract base decorator class (`baseDecorator.hpp`) which inherits from `base.hpp`. The baseDecorator is an interface for the `Lower` and `Upper` classes. 
+
+```cpp
+class BaseDecorator : public Base {
+    private:
+        Base* x;
+    public:
+        BaseDecorator(Base* src) { this->x = src; }
+	
+        virtual Base* at(int i) { return x->at(i); }
+        virtual bool is_complete() { return x->is_complete(); }
+        virtual void toggleComplete() { x->toggleComplete(); }
+        virtual void display() { x->display(); }
+	virtual void setString(std::string src) { x->setString(src); }
+	virtual std::string getString() { return x->getString(); } 
+	virtual void save(std::ofstream& out) { x->save(out); }
+};
+```
+
 ---
 
 ### Visitor Pattern
