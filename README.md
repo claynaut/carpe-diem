@@ -27,3 +27,52 @@ Tools:
 
 ### What will be the input/output of our project?
 The input will be the objectives the user needs to complete in their to-do list. The output will be a to-do list featuring those objectives under their respective categories.
+
+## Design Pattern Use
+### Composite Pattern
+**Problem:** 
+We had two objects, `Tasks` and `Categories`, which we wanted to display to console. However, `Categories` can contain multiple `Tasks` and `Categories` which can contain more objects so accessing each individual object to display its information would not be ideal.
+
+**Solution:** We worked with `Tasks` and `Categories` in the same interface to solve this problem. Now, `Categories` can display their information *and* the information of its children, whether it's a `Task` or a `Category`.
+
+**Implementation:**
+
+---
+
+### Decorator Pattern
+
+---
+
+### Visitor Pattern
+
+## Class Diagrams
+### Composite Pattern
+![alt text](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/composite-pattern.png)
+
+---
+
+### Decorator Pattern
+
+---
+
+### Visitor Pattern
+
+## Input/Output
+
+
+## How To Run the Code
+> This app runs in a terminal, so the following lines of code will be done in command line.
+
+Clone the repository:
+```
+$ git clone https://github.com/claynaut/final-project-nh-jp-mh.git
+```
+Compile the code (use `cmake3 .` if on `hammer`):
+```
+$ cmake .
+$ make
+```
+Run the executable:
+```
+$ ./carpe_diem
+```
