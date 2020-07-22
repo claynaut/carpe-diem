@@ -110,7 +110,9 @@ class BaseDecorator : public Base {
 
 The `baseDecorator` class inherits all the pure virtual functions from the `base.hpp` class. We implemented two new classes that inherit from the `baseDecorator` class:
 - Class `Lower`: This class will output a given string where all characters are in lowercase. It contains a private `Base*` variable and a display function. 
+
 - Class `Upper`: This class will output a given string where all characters are in uppercase. It contains a private `Base*` variable and a display function.
+
     - `display()`: Both classes implement a display function inherited from the `baseDecorator.hpp` class. The function creates a copy of the string and converts all the characters into the desired style. 
 
 ---
