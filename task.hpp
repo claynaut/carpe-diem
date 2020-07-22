@@ -42,6 +42,17 @@ class Task : public Base {
             }
             out << str << std::endl;
         }
+
+	virtual void accept(Visitor* v) { 
+	
+	if(complete == false) {
+		v->visitIncompleteTask();
+	}
+	else {
+		v->visitCompleteTask();
+	}	
+		v->visitTask();
+	}
 };
 
 #endif //__TASK_HPP__

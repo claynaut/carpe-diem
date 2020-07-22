@@ -72,6 +72,16 @@ class Category : public Base {
                  (*it)->save(out, filename);
              }
          }
+	virtual void accept(Visitor* v)  {
+		v->visitCategory();
+		std::list<Base*>::iterator it;
+        	it = children.begin();
+
+             for (it = children.begin(); it != children.end(); it++) {
+		(*it)->accept(v);
+                }	 
+	}
+
 };
 
 #endif //__CATEGORY_HPP__
