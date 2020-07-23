@@ -121,12 +121,12 @@ The `baseDecorator` class inherits all the pure virtual functions from the `base
 
 ## Class Diagrams
 ### Composite Pattern
-![alt text](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/composite-pattern.png)
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/composite-pattern.png)
 
 ---
 
 ### Decorator Pattern
-![alt text](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/Decorator-Pattern-Diagram.png)
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/Decorator-Pattern-Diagram.png)
 
 ---
 
@@ -136,7 +136,7 @@ The `baseDecorator` class inherits all the pure virtual functions from the `base
 ### Home Menu
 > After running the app, the following menu is printed in console. Upon initial set-up, the to-do list is blank.
 
-![alt text](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/home-menu-1.PNG)
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/home-menu-1.PNG)
 
 From this menu, the user has seven options to choose from:
 - **Input** `a`: Prompts the user to add a task in a specified category.
@@ -156,45 +156,67 @@ From this menu, the user has seven options to choose from:
 ### Add Task - Input `a`
 > After inputting `a`, the program prompts the user to choose which category to add a task to.
 
-![alt text](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/add-task-1.PNG)
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/add-task-1.PNG)
 
 > After specifying the category, the program prompts the user to type the name of the task. 
 
-![alt text](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/add-task-2.PNG)
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/add-task-2.PNG)
 
 > After entering the name, a new task is created and displayed in the home menu.
 
-![alt text](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/add-task-3.PNG)
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/add-task-3.PNG)
 
 ### Remove Task - Input `r`
 > After inputting `r`, the program prompts the user to choose which category to remove a task from.
 
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/remove-task-1.PNG)
+
 > After specifying the category, the program prompts the user to choose which task to remove. 
 
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/remove-task-2.PNG)
+
 > After selecting a task, the task is removed and is no longer displayed in the home menu.
+
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/remove-task-3.PNG)
 
 ### Edit Task - Input `e`
 > After inputting `e`, the program prompts the user to choose which category to choose a task to edit.
 
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/edit-task-1.PNG)
+
 > After specifying the category, the program prompts the user to choose which to edit. 
+
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/edit-task-2.PNG)
 
 > After selecting a task, the program prompts the user to type a new name for the task. 
 
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/edit-task-3.png)
+
 > After entering the new name, the new name overwrites the previous name and will now be displayed in the home menu.
+
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/edit-task-4.PNG)
 
 ### Toggle Complete/Incomplete - Input `x`
 > After inputting `x`, the program prompts the user choose which category to choose a task to toggle as complete/incomplete.
 
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/toggle-1.PNG)
+
 > After specifying the category, the program prompts the user to choose which task to toggle as complete/incomplete. 
 
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/toggle-2.PNG)
+
 > After selecting a task, the task is toggled as complete/incomplete and will be displayed as that in the home menu.
+
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/toggle-3.PNG)
 
 ### Clear Complete - Input `c`
 > After inputting `c`, the program clears completed tasks from the to-do list.
 
 Initial state:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/clear-1.PNG)
 
 Output:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/clear-2.PNG)
 
 ### Settings - Input `s`
 > After inputting `s`, the program outputs the current display settings to console and prompts the user with the option to change the display settings.
