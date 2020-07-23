@@ -152,25 +152,77 @@ From this menu, the user has seven options to choose from:
 - **Input** `q`: Ends the program and saves any changes made to the to-do list and settings by writing them into a file specified by the program.
 
 ### Add Task - Input `a`
-> After inputting `a`, the program prompts the user to add a task in a specified category.
+> After inputting `a`, the program prompts the user to choose which category to add a task to.
+
+> After specifying the category, the program prompts the user to type the name of the task. 
+
+> After entering the name, a new task is created and displayed in the home menu.
 
 ### Remove Task - Input `r`
-> After inputting `r`, the program prompts the user to remove a task in a specified category.
+> After inputting `r`, the program prompts the user to choose which category to remove a task from.
+
+> After specifying the category, the program prompts the user to choose which task to remove. 
+
+> After selecting a task, the task is removed and is no longer displayed in the home menu.
 
 ### Edit Task - Input `e`
-> After inputting `e`, the program prompts the user to edit a task in a specified category.
+> After inputting `e`, the program prompts the user to choose which category to choose a task to edit.
+
+> After specifying the category, the program prompts the user to choose which to edit. 
+
+> After selecting a task, the program prompts the user to type a new name for the task. 
+
+> After entering the new name, the new name overwrites the previous name and will now be displayed in the home menu.
 
 ### Toggle Complete/Incomplete - Input `x`
-> After inputting `x`, the program prompts the user to toggle a task as complete/incomplete in a specified category.
+> After inputting `x`, the program prompts the user choose which category to choose a task to toggle as complete/incomplete.
+
+> After specifying the category, the program prompts the user to choose which task to toggle as complete/incomplete. 
+
+> After selecting a task, the task is toggled as complete/incomplete and will be displayed as that in the home menu.
 
 ### Clear Complete - Input `c`
 > After inputting `c`, the program clears completed tasks from the to-do list.
 
+Initial state:
+
+Output:
+
 ### Settings - Input `s`
 > After inputting `s`, the program outputs the current display settings to console and prompts the user with the option to change the display settings.
 
+Initial state:
+
+Output:
+
+> If the user chooses to change the display settings (inputting `y` or `Y`), the program prompts the user to choose which setting to change to.
+
+Initial state:
+
+Output:
+
+> After choosing which setting to change to, the setting is saved and the category names and task names will be displayed as specified in the settings.
+
+Selecting lowercase:
+
+Output:
+
+Selecting uppercase:
+
+Output:
+
+> Otherwise, if the user chooses to not make any changes to the display settings, the program returns to the home menu.
+
+Initial state:
+
+Output:
+
 ### Quit - Input `q`
-> After inputting `q`, the program ends itself and saves any changes made to the to-do list and settings by writing them into a file specified by the program.
+> After inputting `q`, the program ends itself and saves any changes made to the to-do list and settings by writing them into a file specified by the program. The save file is currently set to be labeled as `carpediem_savefile.txt`.
+
+Initial state:
+
+Output:
 
 ## How To Run the Code
 > This app runs in a terminal, so the following lines of code will be done in command line.
