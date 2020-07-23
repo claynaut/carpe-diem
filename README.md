@@ -248,22 +248,26 @@ Selecting default:
 ![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/quit.PNG)
 
 ### Loading Save Files
-> If the user had run the program beforehand and a save file was successfully generated, the program will load that save file if the current date matches the save file's date of creation. Otherwise, the program gives the user the option to either carry over the incomplete tasks from the save file or create a new to-do list. If the user chooses to carry over the incomplete tasks from the save file (inputting `y` or `Y`), the incomplete tasks will be loaded into the program.
+> If the user had run the program beforehand and a save file was successfully generated, the program will load that save file if the current date matches the save file's date of creation. Otherwise, the program gives the user the option to either carry over the incomplete tasks from the save file or create a new to-do list. 
+
+> If the user chooses to carry over the incomplete tasks from the save file (inputting `y` or `Y`), the incomplete tasks will be loaded into the program.
 
 > But if the user chooses to not carry over the incomplete tasks from the save file (inputting `n` or `N`), a blank to-do list will be generated.
 
 ### Invalid Inputs
 > Input validation exists when choosing an option in the home menu, choosing a category, choosing a task, choosing a setting, and answering Y/N prompts. An error message will be printed to console and the user will be given another chance to input until the input is valid.
 
-Choosing an option in the home menu:
+Choosing an invalid option in the home menu:
 
-Choosing a category:
+Choosing an invalid category:
 
-Choosing a task:
+Choosing an empty category:
 
-Choosing a setting:
+Choosing an invalid task:
 
-Answering Y/N prompts:
+Choosing an invalid setting:
+
+Answering `Y/N` prompts with invalid input:
 
 ## How To Run the Code
 > This app runs in a terminal, so the following lines of code will be done in command line.
