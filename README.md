@@ -118,11 +118,13 @@ The `baseDecorator` class inherits all the pure virtual functions from the `base
 ---
 
 ### Visitor Pattern
-**Problem:**
+**Problem:** Our project is essentially an online journal. We wanted the user to be able to keep track of each `Task`, `Category`, and their behavior without necessarily changing their structure.
 
-**Solution:**
+**Solution:** We decided to introduce a Visitor class. By having a specific function, `visit()`, called onto each element in the data structure, we can track each element without altering its structure.
 
 **Implementation:**
+
+We implemented our own `Visitor` class with the following private/public variables that solved our problem. 
 
 ```cpp
 class Visitor {
@@ -154,6 +156,10 @@ class Visitor {
 	int upper_count() { return upper; }
 };
 ```
+
+- **Class** `Visitor`: This class will visit each element and return a number based on the the total amount present in the data structure. 
+	- Private Member Variables: The declaration of these specific variables are the ones the user would want to keep track of.
+	- Public Variables: The `Visitor` class calls a function to visit each element, increment (if applicable), and return it’s value. 
 
 ## Class Diagrams
 ### Composite Pattern
