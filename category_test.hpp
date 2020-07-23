@@ -9,6 +9,8 @@ TEST(CategoryTest, AddChildren) {
     Category* c1 = new Category("Category One");
     Task* t1 = new Task("lorem");
     Task* t2 = new Task("ipsum");
+    Task* t3 = new Task("lorem ipsum");
+    Category* c2 = new Category("Category Two");
 
     std::cout << "Initialize category..." << std::endl;   
     c1->display();
@@ -18,10 +20,13 @@ TEST(CategoryTest, AddChildren) {
     std::cout << "Add children..." << std::endl;
     c1->add(t1);
     c1->add(t2);
+    c1->add(c2);
+    c2->add(t3);
     c1->display();
-    EXPECT_EQ(c1->getSize(), 2);
+    EXPECT_EQ(c1->getSize(), 3);
     EXPECT_EQ(c1->at(0)->getString(), "lorem");
     EXPECT_EQ(c1->at(1)->getString(), "ipsum");
+    EXPECT_EQ(c1->at(2)->getString(), "Category Two");
 }
 
 TEST(CategoryTest, RemoveChildren_Middle) {
@@ -30,28 +35,32 @@ TEST(CategoryTest, RemoveChildren_Middle) {
     Task* t2 = new Task("ipsum");
     Task* t3 = new Task("hello");
     Task* t4 = new Task("world");
+    Category* c2 = new Category("Category Two");
  
     c1->add(t1);
     c1->add(t2);
+    c1->add(c2);
     c1->add(t3);
     c1->add(t4);
 
     std::cout << "Create category with children..." << std::endl;
     c1->display();
-    EXPECT_EQ(c1->getSize(), 4);
+    EXPECT_EQ(c1->getSize(), 5);
     EXPECT_EQ(c1->at(0)->getString(), "lorem");
     EXPECT_EQ(c1->at(1)->getString(), "ipsum");
-    EXPECT_EQ(c1->at(2)->getString(), "hello");
-    EXPECT_EQ(c1->at(3)->getString(), "world");
+    EXPECT_EQ(c1->at(2)->getString(), "Category Two");
+    EXPECT_EQ(c1->at(3)->getString(), "hello");
+    EXPECT_EQ(c1->at(4)->getString(), "world");
     std::cout << std::endl;
 
     std::cout << "Remove task 2..." << std::endl;
     c1->remove(1);
     c1->display();
-    EXPECT_EQ(c1->getSize(), 3);
+    EXPECT_EQ(c1->getSize(), 4);
     EXPECT_EQ(c1->at(0)->getString(), "lorem");
-    EXPECT_EQ(c1->at(1)->getString(), "hello");
-    EXPECT_EQ(c1->at(2)->getString(), "world");
+    EXPECT_EQ(c1->at(1)->getString(), "Category Two");
+    EXPECT_EQ(c1->at(2)->getString(), "hello");
+    EXPECT_EQ(c1->at(3)->getString(), "world");
 }
 
 TEST(CategoryTest, RemoveChildren_First) {
@@ -185,11 +194,15 @@ TEST(CategoryTest, ToggleComplete_All) {
     Task* t1 = new Task("lorem");
     Task* t2 = new Task("ipsum");
     Task* t3 = new Task("hello world");
-    c1->add(t1); c1->add(t2); c1->add(t3);
+    Task* t4 = new Task("lorem ipsum");
+    Category* c2 = new Category("Category Two");
+    c1->add(t1); c1->add(t2); c1->add(t3); c1->add(c2);
+    c2->add(t4);
 
     EXPECT_EQ(c1->at(0)->getString(), "lorem");
     EXPECT_EQ(c1->at(1)->getString(), "ipsum");
     EXPECT_EQ(c1->at(2)->getString(), "hello world");
+    EXPECT_EQ(c1->at(3)->getString(), "Category Two");
 
     c1->display(); std::cout << std::endl;
     EXPECT_EQ(c1->is_complete(), false);
