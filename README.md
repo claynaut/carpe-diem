@@ -254,11 +254,11 @@ Selecting default:
 
 > If the user chooses to carry over the incomplete tasks from the save file (inputting `y` or `Y`), the incomplete tasks will be loaded into the program.
 
-![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/save-2.PNG)
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/save-2.png)
 
 > But if the user chooses to not carry over the incomplete tasks from the save file (inputting `n` or `N`), a blank to-do list will be generated.
 
-![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/save-3.PNG)
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/save-3.png)
 
 ### Invalid Inputs
 > Input validation exists when choosing an option in the home menu, choosing a category, choosing a task, choosing a setting, and answering Y/N prompts. An error message will be printed to console and the user will be given another chance to input until the input is valid.
