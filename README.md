@@ -9,7 +9,7 @@
 | Matthew Huang            | mhuan060@ucr.edu |
 
 ### What is Carpe Diem?
-Carpe Diem is a **productivity journal app** for the day. It aims to keep the user focused on the present by limiting planning to one day.
+Carpe Diem is a **productivity journal app** for the day. It aims to keep the user focused on the present by limiting planning to one day and three categories, high priority, medium priority, and low priority.
 
 Carpe Diem allows the user to **create a to-do list** for the day. Anything that has not been completed for the current day will be carried over the next day, though the user has the option to either keep past objectives or delete them.
 
@@ -68,9 +68,9 @@ We developed the pure virtual functions with the following objectives.
 - `save(std::ofstream)`: Writes to file a tag which indicates the object's class (":task:" for `Task` and ":category:" for `Category`) and the object's name. If a `Task` object calls this function, an additional string is written to file which indicates the status of completion ("+" for complete and "-" for incomplete). If a `Category` object has children, each child `Task` calls this function.
 
 We then developed the classes `Task` and `Category` which we needed to implement this design pattern.
-- Class `Task`: This class represents the tasks in a to-do list and is the leaf node in a composite pattern. It has two private variables, a string representing its name and a boolean value representing its status of completion.
+- **Class** `Task`: This class represents the tasks in a to-do list and is the leaf node in a composite pattern. It has two private variables, a string representing its name and a boolean value representing its status of completion.
 
-- Class `Category`: This class reprents the categories in a to-do list and is the composite/container in a composite pattern. It has two private variables, a string representing its name and a list of `Base*` objects representing its children, whether it's a `Task` object or another `Category` object. 
+- **Class** `Category`: This class reprents the categories in a to-do list and is the composite/container in a composite pattern. It has two private variables, a string representing its name and a list of `Base*` objects representing its children, whether it's a `Task` object or another `Category` object. 
 
    This class also contains three additional functions to aid in its functionality of adding, removing, and accessing its children.
 
@@ -109,9 +109,9 @@ class BaseDecorator : public Base {
 ```
 
 The `baseDecorator` class inherits all the pure virtual functions from the `base.hpp` class. We implemented two new classes that inherit from the `baseDecorator` class:
-- Class `Lower`: This class will output a given string where all characters are in lowercase. It contains a private `Base*` variable and a display function. 
+- **Class** `Lower`: This class will output a given string where all characters are in lowercase. It contains a private `Base*` variable and a display function. 
 
-- Class `Upper`: This class will output a given string where all characters are in uppercase. It contains a private `Base*` variable and a display function.
+- **Class** `Upper`: This class will output a given string where all characters are in uppercase. It contains a private `Base*` variable and a display function.
 
     - `display()`: Both classes implement a display function inherited from the `baseDecorator.hpp` class. The function creates a copy of the string and converts all the characters into the desired style. 
 
@@ -133,7 +133,44 @@ The `baseDecorator` class inherits all the pure virtual functions from the `base
 ### Visitor Pattern
 
 ## Input/Output
+### Home Menu
+> After running the app, following menu is printed in console.
 
+From this menu, the user has seven options to choose from:
+- **Input** `a`: Prompts the user to add a task in a specified category.
+
+- **Input** `r`: Prompts the user to remove a task in a specified category.
+
+- **Input** `e`: Prompts the user to edit a task in a specified category.
+
+- **Input** `x`: Prompts the user to toggle a task as complete/incomplete in a specified category.
+
+- **Input** `c`: Clears completed tasks from the to-do list.
+
+- **Input** `s`: Outputs the current display settings to console and prompts the user with the option to change the display settings.
+
+- **Input** `q`: Ends the program and saves any changes made to the to-do list and settings by writing them into a file specified by the program.
+
+### Add Task - Input `a`
+> After inputting `a`, the program prompts the user to add a task in a specified category.
+
+### Remove Task - Input `r`
+> After inputting `r`, the program prompts the user to remove a task in a specified category.
+
+### Edit Task - Input `e`
+> After inputting `e`, the program prompts the user to edit a task in a specified category.
+
+### Toggle Complete/Incomplete - Input `x`
+> After inputting `x`, the program prompts the user to toggle a task as complete/incomplete in a specified category.
+
+### Clear Complete - Input `c`
+> After inputting `c`, the program clears completed tasks from the to-do list.
+
+### Settings - Input `s`
+> After inputting `s`, the program outputs the current display settings to console and prompts the user with the option to change the display settings.
+
+### Quit - Input `q`
+> After inputting `q`, the program ends itself and saves any changes made to the to-do list and settings by writing them into a file specified by the program.
 
 ## How To Run the Code
 > This app runs in a terminal, so the following lines of code will be done in command line.
