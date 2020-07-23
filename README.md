@@ -134,7 +134,9 @@ The `baseDecorator` class inherits all the pure virtual functions from the `base
 
 ## Input/Output
 ### Home Menu
-> After running the app, following menu is printed in console.
+> After running the app, the following menu is printed in console. Upon initial set-up, the to-do list is blank.
+
+![alt text](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/home-menu-1.PNG)
 
 From this menu, the user has seven options to choose from:
 - **Input** `a`: Prompts the user to add a task in a specified category.
@@ -154,9 +156,15 @@ From this menu, the user has seven options to choose from:
 ### Add Task - Input `a`
 > After inputting `a`, the program prompts the user to choose which category to add a task to.
 
+![alt text](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/add-task-1.PNG)
+
 > After specifying the category, the program prompts the user to type the name of the task. 
 
+![alt text](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/add-task-2.PNG)
+
 > After entering the name, a new task is created and displayed in the home menu.
+
+![alt text](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/add-task-3.PNG)
 
 ### Remove Task - Input `r`
 > After inputting `r`, the program prompts the user to choose which category to remove a task from.
@@ -223,6 +231,10 @@ Output:
 Initial state:
 
 Output:
+
+### Loading Save Files
+
+### Invalid Inputs
 
 ## How To Run the Code
 > This app runs in a terminal, so the following lines of code will be done in command line.
