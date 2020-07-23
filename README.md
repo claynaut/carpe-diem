@@ -173,6 +173,7 @@ class Visitor {
 ---
 
 ### Visitor Pattern
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/visitor-pattern-class-diagram.png)
 
 ## Input/Output
 ### Home Menu
