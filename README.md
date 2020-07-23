@@ -126,7 +126,7 @@ The `baseDecorator` class inherits all the pure virtual functions from the `base
 ---
 
 ### Decorator Pattern
-![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/Decorator-Pattern-Diagram.png)
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/Decorator-Pattern-UML-Diagram.png)
 
 ---
 
