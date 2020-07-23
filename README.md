@@ -250,24 +250,41 @@ Selecting default:
 ### Loading Save Files
 > If the user had run the program beforehand and a save file was successfully generated, the program will load that save file if the current date matches the save file's date of creation. Otherwise, the program gives the user the option to either carry over the incomplete tasks from the save file or create a new to-do list. 
 
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/save-1.PNG)
+
 > If the user chooses to carry over the incomplete tasks from the save file (inputting `y` or `Y`), the incomplete tasks will be loaded into the program.
 
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/save-2.PNG)
+
 > But if the user chooses to not carry over the incomplete tasks from the save file (inputting `n` or `N`), a blank to-do list will be generated.
+
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/save-3.PNG)
 
 ### Invalid Inputs
 > Input validation exists when choosing an option in the home menu, choosing a category, choosing a task, choosing a setting, and answering Y/N prompts. An error message will be printed to console and the user will be given another chance to input until the input is valid.
 
 Choosing an invalid option in the home menu:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/menu-error-1.PNG)
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/menu-error-2.PNG)
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/menu-error-3.PNG)
 
 Choosing an invalid category:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/category-error-1.PNG)
 
 Choosing an empty category:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/empty.PNG)
 
 Choosing an invalid task:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/task-error-1.PNG)
 
 Choosing an invalid setting:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/setting-error-1.PNG)
 
-Answering `Y/N` prompts with invalid input:
+Answering the `Y/N` prompt for loading a save file with invalid input:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/yn-prompt-1.PNG)
+
+Answering the `Y/N` prompt for changing a setting with invalid input:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/yn-prompt-2.PNG)
 
 ## How To Run the Code
 > This app runs in a terminal, so the following lines of code will be done in command line.
