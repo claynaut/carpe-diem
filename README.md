@@ -221,38 +221,31 @@ Output:
 ### Settings - Input `s`
 > After inputting `s`, the program outputs the current display settings to console and prompts the user with the option to change the display settings.
 
-Initial state:
-
-Output:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/settings-1.PNG)
 
 > If the user chooses to change the display settings (inputting `y` or `Y`), the program prompts the user to choose which setting to change to.
 
-Initial state:
-
-Output:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/settings-2.PNG)
 
 > After choosing which setting to change to, the setting is saved and the category names and task names will be displayed as specified in the settings.
 
 Selecting lowercase:
-
-Output:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/settings-2a.PNG)
 
 Selecting uppercase:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/settings-2b.PNG)
 
-Output:
+Selecting default:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/settings-2c.PNG)
 
 > Otherwise, if the user chooses to not make any changes to the display settings, the program returns to the home menu.
 
-Initial state:
-
-Output:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/settings-3.PNG)
 
 ### Quit - Input `q`
 > After inputting `q`, the program ends itself and saves any changes made to the to-do list and settings by writing them into a file specified by the program. The save file is currently set to be labeled as `carpediem_savefile.txt`.
 
-Initial state:
-
-Output:
+![](https://github.com/claynaut/final-project-nh-jp-mh/blob/master/images/quit.PNG)
 
 ### Loading Save Files
 
